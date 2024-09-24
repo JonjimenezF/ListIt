@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -18,7 +18,54 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+h1 {
+  color: #333; /* Color de texto para encabezados */
+  text-align: center;
+}
+
+ul {
+  list-style-type: none; /* Eliminar estilo de lista */
+  padding: 0; /* Sin padding */
+}
+
+li {
+  background: #ffffff; /* Fondo blanco para elementos de lista */
+  margin: 10px 0; /* Margen entre elementos */
+  padding: 10px; /* Padding interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+button {
+  background: #494949; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 10px 0; /* Margen entre elementos */
+  padding: 10px 20px; /* Padding interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background 0.3s ease; /* Efecto de transición al cambiar el fondo */
+}
+input {
+  margin: 10px
+}
+.checklist-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px; /* Ancho fijo */
+  max-width: 100%;
+  margin: auto; /* Centra horizontalmente */
+  position: relative; /* Permite ajustes adicionales */
+  top: 50vh; /* Mueve verticalmente */
+  transform: translateY(-50%);
+}
+
+
 
 @layer utilities {
   .text-balance {
