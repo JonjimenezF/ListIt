@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #3d3d3d;
     --foreground: #ededed;
   }
 }
@@ -48,23 +48,80 @@ button {
   margin: 10px 0; /* Margen entre elementos */
   padding: 10px 20px; /* Padding interno */
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
-  transition: background 0.3s ease; /* Efecto de transición al cambiar el fondo */
 }
+
 input {
-  margin: 10px
+  margin: 10px;
+  outline: none;
+  color: black;
 }
+
+.divinput {
+  border: 2px solid #494949;
+  border-radius: 15px;
+}
+
+
 .checklist-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 5px;
   width: 400px; /* Ancho fijo */
   max-width: 100%;
   margin: auto; /* Centra horizontalmente */
   position: relative; /* Permite ajustes adicionales */
-  top: 50vh; /* Mueve verticalmente */
-  transform: translateY(-50%);
+  top: 25vh; /* Mueve verticalmente */
+  transform: translateY(-20%);
+  height: 650px; /* Establece una altura fija */
+  overflow: auto; /* Agrega scroll si el contenido excede la altura */
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center; /* Opcional: centra verticalmente si el contenedor tiene altura definida */
+}
+
+.task-item {
+  display: flex; /* Usa flexbox para la alineación */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  justify-content: space-between; /* Asegura que el texto y las acciones se distribuyan correctamente */
+}
+
+.task-content {
+  flex: 1; /* Toma el espacio disponible */
+  margin-right: 10px; /* Espaciado entre el texto y el grupo de acciones */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.task-text {
+  margin: 0; /* Elimina el margen del párrafo */
+  overflow-wrap: break-word; /* Permite que las palabras se dividan y se ajusten */
+  white-space: normal; /* Permite saltos de línea */
+  color: rgb(143, 143, 143)
+}
+
+.task-actions {
+  display: flex; /* Flexbox para agrupar el checkbox y el botón */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.task-checkbox {
+  margin-right: 10px; /* Espaciado entre el checkbox y el texto */
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.img-eliminar {
+  width: 23px;
+  height: 20px;
+}
 
 
 @layer utilities {

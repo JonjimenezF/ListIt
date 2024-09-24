@@ -1,14 +1,22 @@
-    // src/components/TaskItem.js
 import React from 'react';
 
 const TaskItem = ({ task, toggleCompletion, removeTask }) => {
   return (
-    <li style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-      {task.text}
-      <button onClick={toggleCompletion}>
-        {task.completed ? 'Desmarcar' : 'Completar'}
-      </button>
-      <button onClick={removeTask}>Eliminar</button>
+    <li className="task-item" style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+      <div className="task-content">
+        <p className="task-text">{task.text}</p>
+      </div>
+      <div className="task-actions">
+        <input 
+          type="checkbox" 
+          checked={task.completed} 
+          onChange={toggleCompletion} 
+          className="task-checkbox"
+        />
+        <button className="btn-eliminar" onClick={removeTask}>
+          <img src="/imagen/eliminar.png" alt="Eliminar" className="img-eliminar" />
+        </button>
+      </div>
     </li>
   );
 };
